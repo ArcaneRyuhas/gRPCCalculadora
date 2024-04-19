@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package calculadora;
+
+service Calculadora {
+  rpc Div(DivRequest) returns (DivResponse);
+  rpc Sum(SumRequest) returns (SumResponse);
+  rpc Mul(MulRequest) returns (MulResponse);
+  rpc Res(ResRequest) returns (ResResponse);
+}
+
+message DivRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message DivResponse {
+  int32 result = 1;
+}
+
+message SumRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message SumResponse {
+  int32 result = 1;
+}
+
+message MulRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message MulResponse {
+  int32 result = 1;
+}
+
+message ResRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message ResResponse {
+  int32 result = 1;
+}
